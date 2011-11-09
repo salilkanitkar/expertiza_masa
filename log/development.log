@@ -1,0 +1,229 @@
+# Logfile created on Tue Nov 08 18:57:43 -0500 2011DEPRECATION WARNING: Kernel#returning has been deprecated in favor of Object#tap. (called from enable_activerecord at C:/My Data/NCSU/Courses Related/Fall-2011/CSC-517/Workspace-RM/expertiza_masa/vendor/plugins/will_paginate/lib/will_paginate.rb:39)
+** [Hoptoad] Notifier 2.4.11 ready to catch errors
+Migrating to InitializeGoldberg (1)
+Migrating to InitializeCustom (2)
+Migrating to CreateGoldbergUsers (3)
+Migrating to CreateUsers (4)
+Migrating to CreateDeadlineRights (5)
+Migrating to CreateDeadlineTypes (6)
+Migrating to CreateLatePolicies (7)
+Migrating to CreateWikiTypes (8)
+Migrating to CreateQuestionnaireTypes (9)
+Migrating to CreateMappingStrategies (10)
+Migrating to CreateReviewStrategies (11)
+Migrating to CreateCourses (12)
+Migrating to CreateCoursesUsers (13)
+Migrating to CreateQuestionnaires (14)
+Migrating to CreateQuestions (15)
+Migrating to CreateQuestionAdvices (16)
+Migrating to CreateAssignments (17)
+Migrating to CreateTeams (18)
+Migrating to CreateTeamsUsers (19)
+Migrating to CreateReviewMappings (20)
+Migrating to CreateReviews (21)
+Migrating to CreateReviewOfReviewMappings (22)
+Migrating to CreateSurveyResponses (23)
+Migrating to CreateReviewFeedbacks (24)
+Migrating to CreateAssignmentsQuestionnaires (25)
+Migrating to CreateReviewScores (26)
+Migrating to CreateReviewOfReviews (27)
+Migrating to CreateReviewOfReviewScores (28)
+Migrating to CreateParticipants (29)
+Migrating to CreateResubmissionTimes (30)
+Migrating to CreateDueDates (31)
+Migrating to AuthorFeedback (32)
+Migrating to DueDateRounds (33)
+Migrating to CreateSurveyDeployments (34)
+Migrating to AddSurveyDeployment (35)
+Migrating to CreateSurveyParticipants (36)
+Migrating to CreateTaMappings (37)
+Migrating to UpdateReviewMappings (38)
+Migrating to UpdateReviewScores (39)
+Migrating to UpdateReviewFeedbacks (40)
+Migrating to DowncasePermissions (41)
+Migrating to CreateInvitationTable (42)
+Migrating to UpdateReviewOfReviewMappings (43)
+Migrating to MenuUpdateUsers (44)
+Migrating to MenuUpdateImpersonate (45)
+Migrating to MenuUpdateImportFile (46)
+Migrating to MenuUpdateReviewMapping (47)
+Migrating to MenuUpdateGrades (48)
+Migrating to MenuUpdateCourseEvaluation (49)
+Migrating to MenuUpdateTeamList (50)
+Migrating to MenuUpdateParticipantChoices (51)
+Migrating to UpdateParticipants (52)
+Migrating to CreateNodes (53)
+Migrating to CreateTreeFolders (54)
+Migrating to CreateFolderNodes (55)
+Migrating to CreateQuestionnaireTypeNodes (56)
+Migrating to CreateQuestionnaireNodes (57)
+Migrating to CreateAssignmentNodes (58)
+Migrating to CreateCourseNodes (59)
+Migrating to MenuUpdateTreeDisplay (60)
+Migrating to ControllerUpdateCoursesUsers (61)
+Migrating to UpdateCourses (62)
+Migrating to CreateTaRole (63)
+Migrating to UpdateTeamsForCourse (64)
+Migrating to CreateTeamNodes (65)
+Migrating to CreateTeamUserNodes (66)
+Migrating to UpdateParticipantTypes (67)
+Migrating to CreateComments (68)
+Migrating to MoveFiles (69)
+Migrating to CreatePeerReviews (70)
+Migrating to CreatePeerReviewScores (71)
+Migrating to AddUnknownControllers (72)
+Migrating to RemoveMissingControllers (73)
+Migrating to UpdateAssignmentsForInvitations (74)
+Migrating to ControllerUpdatePasswords (75)
+Migrating to UpdateMenus (76)
+Migrating to Repl0ValsInAuthFb (77)
+Migrating to RenamePeerReviewQuestionnaireIdToTeammateQuestionnaireIdInAssignments (78)
+Migrating to RenamePeerReviews (79)
+Migrating to CorrectQuestionnaireTypeInReviewScores (80)
+Migrating to CreateScores (81)
+Migrating to AddNewQuestionnaireTypes (82)
+Migrating to RelocateToScoresTable (83)
+Migrating to AddNewMappingStrategy (84)
+Migrating to UpdateControllersTeammateReview (85)
+Migrating to CreateNotifications (86)
+Migrating to CreateQuestionnaireWeights (87)
+Migrating to UpdateCustom (88)
+Migrating to AddHandleToUsers (89)
+Migrating to AddHandleToParticipants (90)
+Migrating to AddTimeStampToFeedback (91)
+Migrating to AddChangeHandleAction (92)
+Migrating to AddReviewerIdToReviewOfReviewMappings (93)
+Migrating to RemoveFieldsFromFeedback (94)
+Migrating to RemoveAdditionalFeedback (95)
+Migrating to CreateTeammateReviewMappings (96)
+Migrating to CreateFeedbackMappings (97)
+Migrating to StandardizeReviewOfReview (98)
+Migrating to StandardizeReviewOfReviewMappings (99)
+Migrating to UpdateControllersStudentTask (100)
+Migrating to StandardizeReviews (101)
+Migrating to StandardizeReviewMappings (102)
+Migrating to UpdateQuestionnaireMenus (103)
+Migrating to UpdateRubricTypes (104)
+Migrating to UpdateControllersPublishing (105)
+Migrating to UpdateControllerForExport (106)
+Migrating to MergeQuestionnaireAndType (107)
+Migrating to CreateQuestionnaireFolderNodes (108)
+Migrating to CleanupAssignmentIndices (109)
+Migrating to CreateAssignmentQuestionnaires (110)
+Migrating to AddActionGradesViewMyScores (111)
+Migrating to CreateResponseMaps (112)
+Migrating to CleanUpQuestionnaires (113)
+Migrating to UpdateControllersForResponse (114)
+Migrating to CreateScoreCaches (115)
+Migrating to CreateSignUpTopics (116)
+Migrating to CreateSignedUpUsers (117)
+Migrating to UpdateAssignments (118)
+Migrating to CreateTopicDependencies (119)
+Migrating to SetPermissionsForSignupSheet (120)
+Migrating to CreateSuggestions (121)
+Migrating to CreateSuggestionComments (122)
+Migrating to AddColumnAllowSuggestionsToAssignments (123)
+Migrating to SetPermissionForSuggestion (124)
+Migrating to AddFlagThreToDueDates (125)
+Migrating to UpdateCache (126)
+Migrating to AddLeaderboardPrivacyToUser (127)
+Migrating to CreateLeaderboards (128)
+Migrating to MenuUpdateLeaderboard (129)
+Migrating to AddPopupPermission (130)
+Migrating to RenameFieldsInAssignments (131)
+Migrating to UpdateFieldsInSignUpTopics (132)
+Migrating to AddTopicIdToParticipants (133)
+Migrating to CreateTopicDeadlines (134)
+Migrating to CreateSessions (135)
+Migrating to UpdateMenuImpersonateRevert (20100920141223)
+Migrating to UpdateMenuDeleteObject (20101001183244)
+Migrating to DigitalSignature (20101018010541)
+Migrating to SetPermissionForUserKeys (20101018010542)
+Migrating to AddPotentialResponseDeadlineToResponseMaps (20101116184601)
+Migrating to AddDynamicReviewFieldsToAssignments (20101116184602)
+Migrating to PermissionForAddDynamicReviewerAction (20101117031216)
+Migrating to AddPersistenceTokenToUser (20101128192024)
+Migrating to AddSelfSelectedReviewFields (20101205034327)
+Migrating to UpdateReviewFields (20101214034327)
+Migrating to AddNotificationAcceptedToResponseMap (20101222143748)
+Migrating to SubmitMultipleHyperlinks (20110205220301)
+Migrating to RemoveDynamicReviewerAssignmentsEnabledFromAssignments (20110210160753)
+Migrating to RemoveTopicFromParticipants (20110304054311)
+Migrating to DropReviewAndMappingStrategies (20110323134426)
+Migrating to PermissionForReviewMapping (20110324001445)
+Migrating to PermissionForMetareviewAssignment (20110407154154)
+Migrating to CreateDropDueDate (20110408190423)
+Migrating to TopicReviewThreshold (20110410232719)
+Migrating to RenameDropTopic (20110512155258)
+DEPRECATION WARNING: Kernel#returning has been deprecated in favor of Object#tap. (called from enable_activerecord at C:/My Data/NCSU/Courses Related/Fall-2011/CSC-517/Workspace-RM/expertiza_masa/vendor/plugins/will_paginate/lib/will_paginate.rb:39)
+** [Hoptoad] Notifier 2.4.11 ready to catch errors
+
+
+Processing ContentPagesController#view_default (for 127.0.0.1 at 2011-11-08 19:03:37) [GET]
+  Parameters: {"action"=>"view_default", "controller"=>"content_pages"}
+Action: authorised
+Authorised? true
+Rendering template within layouts/application
+Rendering content_pages/view_default
+Completed in 6613ms (View: 57, DB: 21) | 200 OK [http://127.0.0.1/]
+
+
+Processing AuthController#login (for 127.0.0.1 at 2011-11-08 19:04:06) [POST]
+  Parameters: {"commit"=>"Login", "action"=>"login", "authenticity_token"=>"39kZt7wo5y0amSL6DqpfCQDwbPuXzvaPuYOm+ev74Zc=", "controller"=>"auth", "login"=>{"name"=>"admin", "password"=>"[FILTERED]"}}
+(Role still current)
+Action: authorised
+Authorised? true
+Failed login attempt
+Redirected to http://127.0.0.1:3000/password_retrieval/forgotten
+Completed in 166ms (DB: 21) | 302 Found [http://127.0.0.1/auth/login]
+
+
+Processing PasswordRetrievalController#forgotten (for 127.0.0.1 at 2011-11-08 19:04:06) [GET]
+  Parameters: {"action"=>"forgotten", "controller"=>"password_retrieval"}
+(Role still current)
+Controller: authorised
+Authorised? true
+Rendering template within layouts/application
+Rendering password_retrieval/forgotten
+Completed in 73ms (View: 19, DB: 12) | 200 OK [http://127.0.0.1/password_retrieval/forgotten]
+
+
+Processing PasswordRetrievalController#forgotten (for 127.0.0.1 at 2011-11-08 19:15:44) [GET]
+  Parameters: {"action"=>"forgotten", "controller"=>"password_retrieval"}
+Controller: authorised
+Authorised? true
+Rendering template within layouts/application
+Rendering password_retrieval/forgotten
+Completed in 263ms (View: 20, DB: 17) | 200 OK [http://127.0.0.1/password_retrieval/forgotten]
+
+
+Processing AuthController#login (for 127.0.0.1 at 2011-11-08 19:15:50) [POST]
+  Parameters: {"commit"=>"Login", "action"=>"login", "authenticity_token"=>"FAAZcxYWhSbcP7M7JOsbWGyuRX7sv3ShcLTme8T+7Uc=", "controller"=>"auth", "login"=>{"name"=>"admin", "password"=>"[FILTERED]"}}
+(Role still current)
+Action: authorised
+Authorised? true
+User admin successfully logged in
+Logging in user as role Credentials
+Redirected to http://127.0.0.1:3000/tree_display/drill
+Completed in 159ms (DB: 43) | 302 Found [http://127.0.0.1/auth/login]
+
+
+Processing TreeDisplayController#drill (for 127.0.0.1 at 2011-11-08 19:15:51) [GET]
+  Parameters: {"action"=>"drill", "controller"=>"tree_display"}
+(Logged-in user)
+Session: time NOT expired
+Action: authorised
+Authorised? true
+Redirected to http://127.0.0.1:3000/tree_display/list
+Completed in 86ms (DB: 16) | 302 Found [http://127.0.0.1/tree_display/drill]
+
+
+Processing TreeDisplayController#list (for 127.0.0.1 at 2011-11-08 19:15:51) [GET]
+  Parameters: {"action"=>"list", "controller"=>"tree_display"}
+(Logged-in user)
+Session: time NOT expired
+Action: authorised
+Authorised? true
+Rendering template within layouts/application
+Rendering tree_display/list
+Completed in 1539ms (View: 1156, DB: 230) | 200 OK [http://127.0.0.1/tree_display/list]
