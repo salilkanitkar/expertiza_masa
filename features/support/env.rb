@@ -47,14 +47,11 @@ ActionController::Base.allow_rescue = false
 # block that will explicitly put your database in a known state.
 Cucumber::Rails::World.use_transactional_fixtures = true
 
-# Empty out the test database. This will only run if it hasn't already.
-`rake db:test:prepare` if User.count > 0
-
-# # Get fixtures ready for use
-# Fixtures.reset_cache
-# fixtures_folder = File.join(RAILS_ROOT, 'spec', 'fixtures')
-# fixtures = Dir[File.join(fixtures_folder, '*.yml')].map {|f| File.basename(f, '.yml') }
-# Fixtures.create_fixtures(fixtures_folder, fixtures)
+# Get fixtures ready for use
+Fixtures.reset_cache
+fixtures_folder = File.join(RAILS_ROOT, 'spec', 'fixtures')
+fixtures = Dir[File.join(fixtures_folder, '*.yml')].map {|f| File.basename(f, '.yml') }
+Fixtures.create_fixtures(fixtures_folder, fixtures)
 
 # Load seed data
 seed_file = File.join(Rails.root, "db", "seeds.rb")
@@ -73,10 +70,4 @@ end
 # Capybara because it starts the web server in a thread.
 ActiveRecord::Base.shared_connection = ActiveRecord::Base.connection
 
-# Show pages for failures (up to 3)
-After do |scenario|
-  if scenario.respond_to?(:status) && scenario.status == :failed
-    $fail_count = $fail_count.to_i + 1
-    save_and_open_page if $fail_count <= 3
-  end
-end
+

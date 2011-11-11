@@ -16,8 +16,7 @@ Given /^a student with the username "(\S+)" exists$/ do |username|
     :clear_password => 'password',
     :clear_password_confirmation => 'password',
     :role => Role.find_by_name!('Student'),
-    :email => "#{username}@mailinator.com",
-    :is_new_user => false
+    :email => "#{username}@mailinator.com"
   })
 end
 
