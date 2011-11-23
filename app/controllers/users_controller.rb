@@ -140,13 +140,21 @@ class UsersController < ApplicationController
     @private_key = @user.generate_keys
   end
   
+  def contributions
+    @contriuser = User.find(params[:id])
+
+    @contriuser_assignments = Participant.find_all_by_user_id(@contriuser.id)
+
+
+  end
+
   protected
 
   def foreign
     role = Role.find((session[:user]).role_id)  
     @all_roles = Role.find(:all, :conditions => ['id in (?) or id = ?',role.get_available_roles,role.id])
   end
- 
+
   private
 
   def get_role

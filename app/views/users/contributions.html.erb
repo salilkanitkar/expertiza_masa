@@ -1,0 +1,62 @@
+<h1>Student Contributions</h1>
+
+<p> Student Name: <%= @contriuser.fullname %> </p>
+
+<h3> Assignments done by <%= @contriuser.fullname %> </h3>
+
+<table cellspacing="5">
+    <% @contriuser_assignments.each do |i| %>
+
+        <tr>
+            <td>Assignment ID:<%= i.parent_id %></td>
+            <td>Participant ID:<%= i.id %></td>
+        </tr>
+
+        <tr>
+            <td><b>Questionnaires for this Assignment</b></td>
+            <% contriuser_assignments_questionnaires = AssignmentQuestionnaires.find_all_by_assignment_id(i.parent_id) %>
+        </tr>
+
+        <tr>
+            <% contriuser_assignments_questionnaires.each do |j| %>
+                <td>Questionnaire ID:<%= j.questionnaire_id %></td>
+            <% end %>
+        </tr>
+
+        <tr>
+          <% num_of_reviews_received = ResponseMap.find_all_by_reviewee_id_and_reviewed_object_id(i.id, i.parent_id) %>
+             <td>Number of reviews received for this assignment:</td>
+             <td><%= num_of_reviews_received.length %></td>
+       </tr>
+
+      <tr>
+        <% num_of_reviews_given = ResponseMap.find_all_by_reviewer_id_and_reviewed_object_id(i.id, i.parent_id) %>
+           <td>Number of reviews given for this assignment:</td>
+           <td><%= num_of_reviews_given.length %></td>
+     </tr>
+
+      <tr>
+        <% num_of_af_given = 0 %>
+        <% num_of_reviews_received.each do |k| %>
+            <% temp1 = Response.find_by_map_id(k.id) %>
+            <% temp = ResponseMap.find_all_by_reviewer_id_and_reviewed_object_id(i.id, temp1.id) %>
+            <% num_of_af_given += temp.length %>
+        <% end %>
+        <td>Number of Author Feedbacks given for this assignment:</td>
+        <td><%= num_of_af_given %></td>
+     </tr>
+
+      <tr>
+        <% num_of_af_received = 0 %>
+        <% num_of_reviews_given.each do |k| %>
+            <% temp1 = Response.find_by_map_id(k.id) %>
+            <% temp = ResponseMap.find_all_by_reviewee_id_and_reviewed_object_id(i.id, temp1.id) %>
+            <% num_of_af_received += temp.length %>
+        <% end %>
+        <td>Number of Author Feedbacks received for this assignment:</td>
+        <td><%= num_of_af_received %></td>
+     </tr>
+
+    <% end %>
+</table>
+
