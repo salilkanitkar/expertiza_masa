@@ -1,0 +1,26 @@
+<% if @contriuser_participants.size == 0 %>
+    <H1><%= @contriuser.fullname %> has not contributed anything so far.</H1>
+<% else %>
+    <H1>Contribution by <%= @contriuser.fullname %></H1>
+    <TABLE class="grades" >
+    <%= render :partial => 'users/participant_title', :locals => {:prefix => nil} %>
+      <% @contriuser_participants.each do |i| %>
+          <% assignment = i.assignment %>
+          <% questions = Hash.new %>
+          <% questionnaires = assignment.questionnaires %>
+          <% questionnaires.each do |questionnaire| %>
+            <% questions[questionnaire.symbol] = questionnaire.questions %>
+              <%# flash[:error] = questionnaire.symbol%>
+          <% end %>
+          <%= render :partial => 'users/participant',
+                           :locals => {:prefix => 'user',
+                                       :team => false,
+                                       :pscore => i.get_all_scores(questions),
+                                       :assignment => assignment,
+                                       :participant => i} %>
+      <% end %>
+
+    </TABLE>
+    <BR/>
+<% end %>
+<a href="javascript:window.history.back()">Back</a>

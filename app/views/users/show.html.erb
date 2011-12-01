@@ -17,7 +17,7 @@
 
 <% if @role.id == 1 %>
 <tr> <th>View <%= @user.fullname %>'s </th>
-  <td> <%= link_to "Contributions", :action => 'contributions', :id => @user %> </td>
+  <td> <%= link_to "Contributions", :action => 'contributions_new', :id => @user %> </td>
 </tr>
 <% end %>
 
