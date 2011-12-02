@@ -2,8 +2,9 @@
     <H1><%= @contriuser.fullname %> has not contributed anything so far.</H1>
 <% else %>
     <H1>Contribution by <%= @contriuser.fullname %></H1>
-    <TABLE class="grades" >
-    <%= render :partial => 'users/participant_title', :locals => {:prefix => nil} %>
+    <TABLE class="grades" cellpadding="2">
+      <%# questions = Hash.new %>
+      <%= render :partial => 'users/participant_title', :locals => {:prefix => nil} %>
       <% @contriuser_participants.each do |i| %>
           <% assignment = i.assignment %>
           <% questions = Hash.new %>
@@ -17,10 +18,13 @@
                                        :team => false,
                                        :pscore => i.get_all_scores(questions),
                                        :assignment => assignment,
-                                       :participant => i} %>
+                                       :participant => i,
+                                       :questions => questions} %>
       <% end %>
 
     </TABLE>
     <BR/>
 <% end %>
+
 <a href="javascript:window.history.back()">Back</a>
+

@@ -1,36 +1,14 @@
-<h1>Student Contributions</h1>
+<% i = @contri_participant %>
 
-<p> Student Name: <%= @contriuser.fullname %> </p>
-
-<h3> Assignments done by <%= @contriuser.fullname %> </h3>
-
-<% tot_num_of_reviews_received = 0 %>
-<% tot_num_of_reviews_given = 0 %>
-<% tot_num_of_af_given = 0 %>
-<% tot_num_of_af_received = 0 %>
-
-<% if @contriuser_assignments.size == 0 %>
-<b> <%= @contriuser.fullname %> has not participated in any Assignments, as of yet. </b>
-
-<% else %>
  <table cellspacing="5">
-    <% @contriuser_assignments.each do |i| %>
 
-        <tr>
-            <td><b>Assignment ID:<%= i.parent_id %></b></td>
-            <td>Participant ID:<%= i.id %></td>
-        </tr>
+       <tr>
+         <td><b>Student Name:<% username = User.find_by_id(i.user_id) %> <%= username.name %></b></td>
+       </tr>
 
-        <tr>
-            <td><b>Questionnaires for this Assignment</b></td>
-            <% contriuser_assignments_questionnaires = AssignmentQuestionnaires.find_all_by_assignment_id(i.parent_id) %>
-        </tr>
-
-        <tr>
-            <% contriuser_assignments_questionnaires.each do |j| %>
-                <td>Questionnaire ID:<%= j.questionnaire_id %></td>
-            <% end %>
-        </tr>
+       <tr>
+            <td><b>Assignment Name:<% assname = Assignment.find_by_id(i.parent_id)%> <%= assname.name %> </b></td>
+       </tr>
 
         <tr>
           <% num_of_reviews_received = ResponseMap.find_all_by_reviewee_id_and_reviewed_object_id(i.id, i.parent_id) %>
@@ -66,25 +44,10 @@
         <td><%= num_of_af_received %></td>
      </tr>
 
-    <tr> <td> </td> </tr>
-    <tr> <td> </td> </tr>
-    <% tot_num_of_reviews_received += num_of_reviews_received.length %>
-    <% tot_num_of_reviews_given += num_of_reviews_given.length %>
-    <% tot_num_of_af_given += num_of_af_given %>
-    <% tot_num_of_af_received += num_of_af_received %>
-
-    <% end %>
-
-   <tr><td><b>Total Contributions by <%= @contriuser.fullname %> </b></td> </tr>
-   <tr><td>Total Number of reviews received by <%= @contriuser.fullname %> :</td> <td> <%= tot_num_of_reviews_received %></td></tr>
-   <tr><td>Total Number of reviews given by <%= @contriuser.fullname %> :</td> <td> <%= tot_num_of_reviews_given %></td></tr>
-   <tr><td>Total Number of Author Feedbacks given by <%= @contriuser.fullname %> :</td> <td> <%= tot_num_of_af_given %></td></tr>
-   <tr><td>Total Number of Author Feedbacks received by <%= @contriuser.fullname %> :</td> <td> <%= tot_num_of_af_received %></td></tr>
-
  </table>
 
-<%end%>
+<br/>
 
-<br/><br/>
-<%= link_to 'Back', :controller => 'users', :action => 'show', :id => @contriuser.id %>
+<a href="javascript:window.history.back()">Back</a>
+
 

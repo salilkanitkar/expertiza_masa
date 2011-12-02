@@ -141,24 +141,17 @@ class UsersController < ApplicationController
   end
   
   def contributions
-   # @contriuser = User.find(params[:id])
+   #@contriuser = User.find(params[:id])
 
-   # @contriuser_assignments = Participant.find_all_by_user_id(@contriuser.id)
+   #@contriuser_assignments = Participant.find_all_by_user_id(@contriuser.id)
 
-
+    @contri_participant = Participant.find_by_id(params[:participant])
   end
 
   def contributions_new
     @contriuser = User.find(params[:id])
 
     @contriuser_participants = AssignmentParticipant.find_all_by_user_id(@contriuser.id)
-
-#    @contriuser_assignments = []
-
-#    @contriuser_participant.each { |i|
-#      @contriuser_assignments << i.assignment
-#    }
-
   end
 
   protected
