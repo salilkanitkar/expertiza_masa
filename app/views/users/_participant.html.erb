@@ -1,29 +1,37 @@
 <!-- PARTICIPANT -->
-<% 
+<%
   participant = pscore[:participant]
   if pscore[:review]
   	s_avg = pscore[:review][:scores][:avg]
+    tot_contributions[:review] += pscore[:review][:assessments].size
   end
   if pscore[:metareview]
   	r_avg = pscore[:metareview][:scores][:avg]
+    tot_contributions[:metareview] += pscore[:metareview][:assessments].size
   end 
   if pscore[:feedback]
   	f_avg = pscore[:feedback][:scores][:avg]
+    tot_contributions[:feedback] += pscore[:feedback][:assessments].size
   end
   if pscore[:review_given]
   	sg_avg = pscore[:review_given][:scores][:avg]
+    tot_contributions[:review_given] += pscore[:review_given][:assessments].size
   end
   if pscore[:metareview_given]
   	rg_avg = pscore[:metareview_given][:scores][:avg]
+    tot_contributions[:metareview_given] += pscore[:metareview_given][:assessments].size
   end
   if pscore[:feedback_given]
   	fg_avg = pscore[:feedback_given][:scores][:avg]
+    tot_contributions[:feedback_given] += pscore[:feedback_given][:assessments].size
   end
   if pscore[:teammate]
   	tr_avg = pscore[:teammate][:scores][:avg]
+    tot_contributions[:teammate] += pscore[:teammate][:assessments].size
   end
   if pscore[:teammate_given]
   	trg_avg = pscore[:teammate_given][:scores][:avg]
+    tot_contributions[:teammate_given] += pscore[:teammate_given][:assessments].size
   end
 %>
 
